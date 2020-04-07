@@ -1,10 +1,12 @@
 package lab5zad2;
 
+import java.util.Arrays;
+
 public class Fifo {
 
 	private Car[] cars = new Car[30];
 
-	static int index = 0;
+	private static int index = 0;
 
 	public void add(Car car) {
 
@@ -14,17 +16,16 @@ public class Fifo {
 		}
 	}
 
-	public Car[] get() {
-		return cars;
+	public Car get() {
+
+		return cars[0];
 	}
 
 	public boolean isEmpty() {
-
 		return index == 0;
 	}
 
 	public boolean isFull() {
-
 		return index == 29;
 	}
 
@@ -47,6 +48,12 @@ public class Fifo {
 		}
 
 		return null;
+	}
+
+	@Override
+	public String toString() {
+
+		return Arrays.toString(cars);
 	}
 
 }

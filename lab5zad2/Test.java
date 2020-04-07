@@ -63,14 +63,17 @@ public class Test {
 		System.out.println("bufor zawiera car5?");
 		System.out.println(fifo.contains(car5));
 
-		Car newCar = fifo.find(car5);
+		System.out.println("Odnajdywanie elementu w kolejce: ");
+		Car finded = fifo.find(car2);
+		System.out.println("Informacje o samochodzie: Właściciel " + finded.getOwner() + " Marka " + finded.getBrand()
+				+ " Model " + finded.getModel());
 
-		System.out.println(newCar);
+		System.out.println("Pobranie elementu z kolejki: ");
+		Car car6 = fifo.get();
+		System.out.println("Informacje o samochodzie: Właściciel " + car6.getOwner() + " Marka " + car6.getBrand()
+				+ " Model " + car6.getModel());
 
-		Car[] cars = fifo.get();
-
-		for (Car c : cars)
-			System.out.println(c.toString());
+		System.out.println(fifo.toString());
 	}
 
 }

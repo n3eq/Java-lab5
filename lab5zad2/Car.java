@@ -34,7 +34,28 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Owner: " + this.owner + "Brand: " + this.brand + "Model: " + this.model + "year: " + this.year
-				+ "color: " + this.color;
+		return "Owner: " + this.owner + " Marka: " + this.brand + " Model: " + this.model + " Year: " + this.year
+				+ " Color: " + this.color + "\n";
 	}
+
+	public String getOwner() {
+		return owner;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
 }
